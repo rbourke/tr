@@ -34,39 +34,37 @@ $ node src/App.js
 
 ## Test Coverage
 
-To install the Jest test runner, execute the command:
+To install the Jest test runner, execute this command:
 
 ```sh
 $ npm i
 ```
 
-To run the tests and print a coverage report, execute the command:
+To run the tests and print a coverage report, execute this command:
 
 ```sh
 $ npm run test -- --coverage
 ```
 
-(no need to set up and configure Istanbul for coverage or Jasmine/Mocha for a runner - Jest can test Node apps too!)
-
 ## Usage Examples
 
-a)----------------
-PLACE 0,0,NORTH
-MOVE
-REPORT 
-Output: 0,1,NORTH
+ a)----------------
+ PLACE 0,0,NORTH
+ MOVE
+ REPORT
+ Output: 0,1,NORTH
 
-b)----------------
-PLACE 0,0,NORTH
-LEFT
-REPORT
-Output: 0,0,WEST
+ b)----------------
+ PLACE 0,0,NORTH
+ LEFT
+ REPORT
+ Output: 0,0,WEST
 
-c)----------------
-PLACE 1,2,EAST
-MOVE
-MOVE
-LEFT
-MOVE
-REPORT
-Output: 3,3,NORTH
+ c)----------------
+ PLACE 1,2,EAST
+ MOVE
+ MOVE
+ LEFT
+ MOVE
+ REPORT
+ Output: 3,3,NORTH
