@@ -1,0 +1,23 @@
+{
+    "table" : {
+        "dimensions" : {
+            "defaultLength" : 5,
+            "defaultWidth" : 5
+        }    
+    },
+    "robot" : {
+        "command" : {
+            "PLACE": "PLACE",
+            "LEFT": "LEFT",
+            "RIGHT": "RIGHT",
+            "MOVE": "MOVE",
+            "REPORT": "REPORT"    
+        },
+        "facing" : {
+            "NORTH": "NORTH",
+            "EAST": "EAST",
+            "SOUTH": "SOUTH",
+            "WEST": "WEST"
+        }
+    }
+}
