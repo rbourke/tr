@@ -70,7 +70,7 @@ Robot.prototype.moveForward = function() {
             }
         default:
     }
-            
+
 };
 
 Robot.prototype.turnLeft = function() {
@@ -139,7 +139,10 @@ Robot.prototype.processInput = function(input) {
 
     switch (args[0].toUpperCase()) {
         case this.command.PLACE:
-            this.placed = this.placeRobotAtPosition(Number(args[1]), Number(args[2]), args[3]);
+            if (args.length === 4) {
+                this.placed = this.placeRobotAtPosition(
+                        Number(args[1]), Number(args[2]), args[3].toUpperCase());
+            }
             return this.placed;
         case this.command.LEFT:
             if (this.placed) {
