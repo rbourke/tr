@@ -48,23 +48,23 @@ $ npm run test -- --coverage
 
 ## Usage Examples
 
- a)----------------
- PLACE 0,0,NORTH
- MOVE
- REPORT
- Output: 0,1,NORTH
+    a)----------------
+    PLACE 0,0,NORTH
+    MOVE
+    REPORT
+    Output: 0,1,NORTH
 
- b)----------------
- PLACE 0,0,NORTH
- LEFT
- REPORT
- Output: 0,0,WEST
+    b)----------------
+    PLACE 0,0,NORTH
+    LEFT
+    REPORT
+    Output: 0,0,WEST
 
- c)----------------
- PLACE 1,2,EAST
- MOVE
- MOVE
- LEFT
- MOVE
- REPORT
- Output: 3,3,NORTH
+    c)----------------
+    PLACE 1,2,EAST
+    MOVE
+    MOVE
+    LEFT
+    MOVE
+    REPORT
+    Output: 3,3,NORTH
