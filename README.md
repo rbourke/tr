@@ -48,9 +48,8 @@ $ npm run test -- --coverage
 
 (no need to set up and configure Istanbul for coverage or Jasmine/Mocha for a runner - Jest can test Node apps too!)
 
-## Application Example
+## Usage Examples
 
-Example Input and Output:
 a)----------------
 PLACE 0,0,NORTH
 MOVE
