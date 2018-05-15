@@ -134,6 +134,31 @@ it('cannot move SOUTH from position: max,max', () => {
     expect(robot.getYordinate()).toBe(table.getLength() - 2);
 });
 
+it('detects an invalid direction', () => {
+    let result = robot.isDirectionFacingValid("SOUTH WEST");
+    expect(result).toBeFalsy();
+});
+
+it('detects that NORTH is a valid direction', () => {
+    let result = robot.isDirectionFacingValid("NORTH");
+    expect(result).toBeTruthy();
+});
+
+it('detects that EAST is a valid direction', () => {
+    let result = robot.isDirectionFacingValid("EAST");
+    expect(result).toBeTruthy();
+});
+
+it('detects that SOUTH is a valid direction', () => {
+    let result = robot.isDirectionFacingValid("SOUTH");
+    expect(result).toBeTruthy();
+});
+
+it('detects that WEST is a valid direction', () => {
+    let result = robot.isDirectionFacingValid("WEST");
+    expect(result).toBeTruthy();
+});
+
 it('ignores invalid commands', () => {
     let result = robot.processInput("FLY");
     expect(result).toBeFalsy();
