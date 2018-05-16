@@ -202,10 +202,12 @@ Robot.prototype.processInput = function(input) {
     switch (args[0].toUpperCase()) {
         case this.command.PLACE:
             if (args.length > 3) {
-                this.placed =
-                        this.placeRobotAtPosition(Number(args[1]), Number(args[2]), args[3].toUpperCase());
+                if (this.placeRobotAtPosition(Number(args[1]), Number(args[2]), args[3].toUpperCase())) {
+                    this.placed = true;
+                    return true;
+                }
             }
-            return this.placed;
+            return false;
         case this.command.LEFT:
             if (this.placed) {
                 this.turnLeft();
