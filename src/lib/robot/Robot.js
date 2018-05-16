@@ -47,7 +47,7 @@ Robot.prototype.isPositionValid = function(xOrdinate, yOrdinate) {
  */
 Robot.prototype.isDirectionFacingValid = function(directionFacing) {
 
-    return [this.facing.NORTH, this.facing.EAST, this.facing.SOUTH, this.facing.WEST].indexOf(directionFacing) > -1; 
+    return [this.facing.NORTH, this.facing.EAST, this.facing.SOUTH, this.facing.WEST].includes(directionFacing); 
 };
 
 /**
@@ -201,9 +201,9 @@ Robot.prototype.processInput = function(input) {
 
     switch (args[0].toUpperCase()) {
         case this.command.PLACE:
-            if (args.length === 4) {
-                this.placed = this.placeRobotAtPosition(
-                        Number(args[1]), Number(args[2]), args[3].toUpperCase());
+            if (args.length > 3) {
+                this.placed =
+                        this.placeRobotAtPosition(Number(args[1]), Number(args[2]), args[3].toUpperCase());
             }
             return this.placed;
         case this.command.LEFT:
