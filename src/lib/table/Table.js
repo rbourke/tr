@@ -1,10 +1,10 @@
 /**
- * Table module.
+ * table module.
  * @module lib/table/Table
  */
 
 /**
- * Table object constructor.
+ * table object constructor.
  * @constructor
  * @param {string} dimensions - The dimensions for the table.
  */
@@ -19,7 +19,7 @@ function Table(dimensions) {
 }
 
 /**
- * Resize the table.
+ * resize the table.
  * @param {number} newWidth - The new width of the table.
  * @param {number} newLength - The new length of the table.
  */

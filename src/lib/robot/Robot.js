@@ -1,10 +1,10 @@
 /**
- * Robot module.
+ * robot module.
  * @module lib/robot/Robot
  */
 
 /**
- * Robot object constructor.
+ * robot object constructor.
  * @constructor
  * @param {Table} table - The table for the robot.
  * @param {string} config - The config for the robot.
@@ -25,7 +25,7 @@ function Robot(table, config) {
 }
 
 /**
- * Verifies whether a position on the table can be occupied by the robot.
+ * verifies whether a position on the table can be occupied by the robot.
  * @param {number} xOrdinate - The X ordinate of the position being validated.
  * @param {number} yOrdinate - The Y ordinate of the position being validated.
  * @return {boolean} Whether the robot can occupy the position.
@@ -41,7 +41,7 @@ Robot.prototype.isPositionValid = function(xOrdinate, yOrdinate) {
 };
 
 /**
- * Verfies whether a direction is valid.
+ * verfies whether a direction is valid.
  * @param {string} directionFacing - The X ordinate of the position being validated.
  * @return {boolean} Whether the direction is a valid direction.
  */
@@ -51,7 +51,7 @@ Robot.prototype.isDirectionFacingValid = function(directionFacing) {
 };
 
 /**
- * Places the robot at a location and orientation.
+ * places the robot at a location and orientation.
  * @param {number} xOrdinate - The X ordinate for the position of the robot.
  * @param {number} yOrdinate - The Y ordinate for the position of the robot.
  * @param {string} directionFacing - The orientation of the robot.
@@ -70,7 +70,7 @@ Robot.prototype.placeRobotAtPosition = function(xOrdinate, yOrdinate, directionF
 };
 
 /**
- * Moves the robot forward in the direction it is facing.
+ * moves the robot forward in the direction it is facing.
  * @return {boolean} Whether the robot was able to move.
  */
 Robot.prototype.moveForward = function() {
@@ -111,7 +111,7 @@ Robot.prototype.moveForward = function() {
 };
 
 /**
- * Rotates the robot 90 degrees to the left of its current orientation.
+ * rotates the robot 90 degrees to the left of its current orientation.
  * @return {boolean} Whether the robot was able to turn left.
  */
 Robot.prototype.turnLeft = function() {
@@ -135,7 +135,7 @@ Robot.prototype.turnLeft = function() {
 };
 
 /**
- * Rotates the robot 90 degrees to the right of its current orientation.
+ * rotates the robot 90 degrees to the right of its current orientation.
  * @return {boolean} Whether the robot was able to turn right.
  */
 Robot.prototype.turnRight = function() {
@@ -191,7 +191,7 @@ Robot.prototype.report = function() {
 }
 
 /**
- * Parses and executes a command string.
+ * parses and executes a command string.
  * @param {string} input - The command line entered via stdin.
  * @return {boolean} Whether the command was parsed and executed successfully.
  */
@@ -230,6 +230,7 @@ Robot.prototype.processInput = function(input) {
             }
         case this.command.REPORT:
             if (this.placed) {
+                /* eslint-disable no-console */
                 console.log(this.report());
             } else {
                 return false;
